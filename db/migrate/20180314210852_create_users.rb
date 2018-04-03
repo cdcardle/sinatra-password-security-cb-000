@@ -1,4 +1,11 @@
 class CreateUsers < ActiveRecord::Migration[5.1]
-  def change
+  def up
+    create_table :users dp |t|
+    t.string :username
+    t.string :password_digest
+  end
+  
+  def down
+    drop_table :users
   end
 end
